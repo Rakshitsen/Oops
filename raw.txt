@@ -1,0 +1,1128 @@
+# class BankAccount:
+#     def __init__(self, account_holder,balance):
+#         self.holder = account_holder
+#         self.balance = balance
+    
+#     def deposit(self, amount):
+#         if amount >0:
+#             self.balance += amount
+#             print(f"Deposited {amount}. New balance is {self.balance}")
+#         else:
+#             print("Deposit amount must be positive")
+#     def withdraw (self,amount):
+#         if 0<amount<=self.balance:
+#             self.balance -= amount
+#             print(f"Withdrew {amount}. New balance is {self.balance}")
+#         else:
+#             print("Withdraw amount must be positive and less than balance")
+#     def get_balance(self):
+#         return self.balance
+        
+
+# account= BankAccount("rakshit",50000)
+# print(account.get_balance())
+
+
+
+# class person:
+#     def __init__(self,name,age):
+#         print("contructor is called")
+#         self.name=name
+#         self.age=age
+    
+#     def display(self):
+#         print(f"Name: {self.name} we know you Age: is  {self.age}")
+
+
+
+# p1=person("Rakshit",23)
+
+# p1.display()
+
+
+
+ 
+
+
+
+# class car:
+#     def __init__(self,brand,price):
+#         print("contructor is called")
+#         self.brand=brand
+#         self.price=price
+    
+#     def display(self):
+#         print(f"Brand: {self.brand} Price: {self.price}")
+
+
+# c1=["Audi","BMW","Mercedes"]
+# p1=[5000000,6000000,7000000]
+
+# for i in range(3):
+#     c=car(c1[i],p1[i])
+#     c.display()
+
+
+
+# class Laptop:
+#     def __init__(self,brand="Dell",price=30000):
+#         print("contructor is called")
+#         self.brand=brand
+#         self.price=price
+    
+#     def show(self):
+#         print(f"Brand: {self.brand} Price: {self.price}")
+
+# l1=Laptop()
+# l1.show()
+# l2=Laptop("HP",40000)
+# l2.show()
+
+
+
+# class example:
+#     def __init__(self):
+#         print("contructor is called")
+
+#     def __del__(self):
+#         print("destructor is called")
+
+# e1=example()
+
+# del e1
+# print("End of the program")
+
+
+
+# class car:
+#     def __init__(self,brand,price):
+#         print("contructor is called")
+#         self.brand=brand
+#         self.price=price
+    
+#     def display(self):
+#         print(f"Brand: {self.brand} Price: {self.price}")
+
+#     def __del__(self):
+#         print("Destructor is called")
+
+
+# c1=car("Audi",5000000)
+# c1.display()
+# del c1
+# c2=car("BMW",6000000)
+# c2.display()
+# del c2
+
+# 
+
+
+
+# class Product:
+#     def __init__(self,name,price):
+#         print("contructor is called")
+#         self.name=name
+#         self.price=price
+
+#     def apply_discount(self,discount):
+#        self.price-=(self.price*discount/100)
+#        print(f"Price after discount: {self.price}")
+
+#     def display(self):
+#         print(f"Name: {self.name} Price: {self.price}")
+
+
+# p1=input("Enter the name of the product: ")
+# r1=50000
+# # p1=Product("Laptop",50000)
+# item=Product(p1,r1)
+# item.display()
+# d1=int(input("Enter the discount: "))
+# item.apply_discount(d1)
+
+
+# class Employee:
+#     def __init__(self,name,base_salary):
+#         print("contructor is called")
+#         self.name=name
+#         self.salary=base_salary
+    
+#     def display(self):
+#         print(f"Name: {self.name} Salary: {self.salary}")
+
+#     def calculate_salary(self,bonus):
+#         self.salary+=bonus
+#         print(f"Salary after bonus: {self.salary}")
+
+
+# emp1=Employee("Rakshit",50000)
+# emp1.display()
+# b1=10000
+# emp1.calculate_salary(b1)
+
+# class Book:
+#     def __init__(self,title, author, price):
+#         self.title = title
+#         self.author = author
+#         self.price = price
+    
+#     def display_book(self):
+#         print(f"Title: of {self.title} wrote by Author: {self.author} Price: {self.price}")
+
+
+# b1=Book("Python","Rakshit",500)
+# b1.display_book()
+# b2=Book("Java","kriss",600)
+# b2.display_book()
+
+# class BankAccount:
+#     def __init__(self,account_number, balance):
+#         self.account_number=account_number
+#         self.balance=balance
+    
+#     def deposit(self,amount):
+#         self.balance+=amount
+#         print(f"Deposited {amount} so your New balance is {self.balance}")
+    
+#     def withdraw(self,amount):
+#         if amount<=self.balance:
+#             self.balance-=amount
+#             print(f"Withdrew {amount} so your New balance is {self.balance}")
+#         else:
+#             print("Insufficient balance")
+    
+#     def check_balance(self):
+#         print(f"Your current balance is {self.balance}")
+
+# acc_number=int(input("Please Enter the account number: "))
+# acc_balance=500000 #for now we are hardcoding the balance
+# BA1=BankAccount(acc_number,acc_balance)
+# BA1.check_balance()
+# BA1.deposit(50000)
+# BA1.withdraw(1000)
+
+
+
+# class Vehicle:
+#     def __init__(self, brand, model, mileage):
+#         self.brand=brand
+#         self.model=model
+#         self.mileage=mileage
+    
+
+#     def display_info(self):
+#         print(f"Brand: {self.brand} Model: {self.model} Mileage: {self.mileage}")
+
+
+# v1=Vehicle("Audi","A4",15)
+# v1.display_info()
+# v2=Vehicle("BMW","X5",20)
+# v2.display_info()
+
+
+
+
+
+# class Circle:
+#     def __init__(self, radius):
+#         self.radius=radius
+    
+
+#     def area(self):
+#         res_area=3.14*self.radius*self.radius
+#         print(f"Area of the circle is {res_area}")
+    
+#     def circumference(self):
+#         res_circumference=2*3.14*self.radius
+#         print(f"Circumference of the circle is {res_circumference}")
+    
+
+# r1=int(input("Enter the radius of the circle: "))
+# c1=Circle(r1)
+# c1.area()
+# c1.circumference()
+
+
+
+# class Employee:
+#     def __init__(self, name, salary):
+#         self.name = name
+#         self.__salary = salary  # Private variable
+
+#     # Getter method for salary
+#     def get_salary(self):
+#         return self.__salary
+
+#     # Setter method for salary
+#     def set_salary(self, new_salary):
+#         if new_salary >=  0 and new_salary<=100000:
+#             self.__salary = new_salary
+#         else:
+#             print("Salary cannot be negative!")
+
+# # Creating an object
+# emp = Employee("Rakshit", 50000)
+
+# # Accessing salary using getter
+# print("Salary:", emp.get_salary())
+
+# # Trying to modify salary using setter
+# emp.set_salary(60000)
+# print("Updated Salary:", emp.get_salary())
+
+
+
+
+# class BankAccount:
+#     def __init__(self,account_number,pin_code):
+#         self.__account_number=account_number
+#         self.__pin_code=None
+#         self.set_pin_code(pin_code)
+
+    
+#     def get_account_number(self):
+#         return self.__account_number
+    
+#     def get_pin_code(self):
+#         return "****"
+    
+#     def set_pin_code(self,new_pin):
+#         if isinstance(new_pin,int) and 1000<=new_pin<=9999:
+#             self.__pin_code=new_pin
+#             print("PIN code has been changed successfully.")
+#         else:
+#             print("Invalid PIN! PIN must be a 4-digit number.")
+    
+
+# acc_number = int(input("Enter the account number: "))
+# pin = int(input("Enter the 4-digit PIN code: "))
+# acc = BankAccount(acc_number, pin)
+# print("Your PIN:", acc.get_pin_code()) 
+# acc.set_pin_code(12345)
+# acc.set_pin_code(1234)
+# print("Your PIN:", acc.get_pin_code())
+
+
+# class MobilePhone:
+#     def __init__(self, battery_level):
+#         self.__battery_level = battery_level  # Private attribute
+    
+#     def get_battery_level(self):
+#         return self.__battery_level  # Getter method
+
+#     def set_battery_level(self, new_level):
+#         if 0 <= new_level <= 100:
+#             self.__battery_level = new_level
+#             print(f"Battery level has been changed successfully to {self.__battery_level}.")
+#         else:
+#             print("Invalid battery level! Battery level must be between 0 and 100.")
+
+# # Taking user input
+# battery = int(input("Enter the battery level: "))
+# phone = MobilePhone(battery)
+
+# # Display initial battery level
+# print("Your battery level:", phone.get_battery_level())
+
+# # Testing battery updates
+# phone.set_battery_level(50)   # ✅ Valid input
+# phone.set_battery_level(150)  # ❌ Invalid input
+
+
+
+# class Temperature:
+#     def __init__(self, celsius):
+#         if celsius < -273.15:
+#             raise ValueError("Temperature below -273.15 is not possible.")
+#         self.__celsius = celsius
+    
+#     def get_fahrenheit(self):
+#         return (self.__celsius * 9/5) + 32 
+
+# temp=int(input("Enter the temperature in celsius: "))
+
+# try:
+#     t1=Temperature(temp) # ❌ This should raise an error
+#     print(f"Fahrenheit: {t1.get_fahrenheit()}")
+
+# except ValueError as e:
+#     print(e)  # Prints the error message properly
+
+
+# class UserAccount:
+#     def __init__(self, password):
+#         self.__password = None  # Default value
+#         self.set_password(password)  # Validate and set password
+
+#     def get_password(self):
+#         return "Password is hidden for security reasons"
+
+#     def set_password(self, new_password):
+#         if len(new_password) >= 8:
+#             self.__password = new_password
+#             print("✅ Password has been set successfully.")
+#         else:
+#             print("❌ Password must be at least 8 characters long.")
+
+# # Testing the class
+# U1 = UserAccount("Rakshit")  # ❌ Fails because it's less than 8 characters
+# print("Your password:", U1.get_password())  # 🚫 Access denied
+# U1.set_password("Rakshit123")  # ✅ Successfully sets password
+# print("Your password:", U1.get_password())  # 🚫 Access denied
+
+
+
+# class Student:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.__age = age  # Private variable
+
+#     def get_age(self):
+#         return self.__age 
+
+#     def set_age(self,new_age):
+#         if new_age > 0:
+#             self.__age = new_age 
+#             return self.__age
+#         else:
+#             print("Age must be positive!")
+
+# # Testing
+# s1 = Student("Rakshit", 24)
+# print(s1.get_age())  
+# s1.set_age(25) 
+# print(s1.get_age())  
+
+
+
+
+# class Animal:
+#     def __init__(self,name):
+#         self.name=name
+    
+#     def make_sound(self):
+#         print("Some generic animal sound")
+
+# class Dog(Animal):
+#     def make_sound(self):
+#         print("Bark")
+
+# class Cat(Animal):
+#     def make_sound(self):
+#         print("Meow")
+
+
+# a=Animal("Some Animal")
+# a.make_sound()
+# d=Dog("Tommy")
+# d.make_sound()
+# c=Cat("Kitty")
+# c.make_sound()
+
+
+# class Vehicle:
+#     def __init__(self,brand,model):
+#         self.brand=brand
+#         self.model=model
+    
+#     def display_info(self):
+#         print(f"Brand: {self.brand} Model: {self.model}")
+    
+
+# class Car(Vehicle):
+#     def __init__(self,brand,model,fuel_type):
+#         super().__init__(brand,model)
+#         self.fuel_type=fuel_type
+
+#     def car_info(self):
+#          print(f"Fuel Type: {self.fuel_type}")
+
+
+# c1=Car("Audi","A4","Petrol")
+# c1.display_info()
+# c1.car_info()
+
+
+
+
+
+# class Person:
+#     def __init__(self,name):
+#         self.name=name
+
+#     def introduce(self):
+#         print(f"Hi, I am {self.name}")
+
+
+# class Employee(Person):
+#     def __init__(self, name,job):
+#         super().__init__(name)
+#         self.job=job
+    
+
+#     def work(self):
+#         print(f"I am a {self.job}")
+
+# class Manager(Employee):
+#     def __init__(self, name, job, department):
+#         super().__init__(name, job)
+#         self.department = department
+
+#     def manage(self):
+#         print(f"I manage the {self.department} department.")
+
+# m1 = Manager("Rakshit", "Project Manager", "IT")
+# m1.introduce()  # Output: Hello, my name is Rakshit
+# m1.work()       # Output: I am a Project Manager
+# m1.manage()     # Output: I manage the IT department.
+
+
+# class Employee:
+#     def __init__(self, name, salary):
+#         self.name = name
+#         self.salary = salary
+
+#     def display(self):
+#         print(f"Name: {self.name}, Salary: {self.salary}")
+
+# class Manager(Employee):
+#     def __init__(self, name, salary, department):
+#         super().__init__(name, salary)
+#         self.department = department
+
+#     def display(self):
+#         print(f"Name: {self.name}, Salary: {self.salary}, Department: {self.department}")
+
+# class Developer(Employee):
+#     def __init__(self, name, salary, programming_language):
+#         super().__init__(name, salary)
+#         self.programming_language = programming_language
+
+#     def display(self):
+#         print(f"Name: {self.name}, Salary: {self.salary}, Programming Language: {self.programming_language}")
+
+
+# m1 = Manager("Rakshit", 50000, "IT")
+# m1.display()
+
+# d1 = Developer("Rahul", 40000, "Python")
+# d1.display()
+
+
+
+
+
+# Since the __init__() method of Vehicle does nothing, you don’t actually need to call super().__init__() in Car and Motorcycle
+
+# class vehicle:
+#     def start_engine(self):
+#         print("Starting the engine")
+
+# class car(vehicle):
+#     def start_engine(self):
+#         return super().start_engine()
+
+# class motorcycle(vehicle):
+#     def start_engine(self):
+#         return super().start_engine()
+
+# v1=vehicle()
+# c1=car()
+# m1=motorcycle()
+# c1.start_engine()
+
+
+# class ElectronicDevice:
+#     def __init__(self, brand):
+#         self.brand = brand
+    
+#     def power_on(self):
+#         print(f"{self.brand} device is powering on...")
+
+# class Laptop(ElectronicDevice):
+#     def __init__(self, brand, ram_size):
+#         super().__init__(brand)
+#         self.ram_size = ram_size
+    
+#     def specs(self):
+#         print(f"Brand: {self.brand} RAM: {self.ram_size}GB")
+
+# class MobilePhone(ElectronicDevice):
+#     def __init__(self, brand, battery_capacity):
+#         super().__init__(brand)
+#         self.battery_capacity = battery_capacity
+    
+#     def battery_status(self):
+#         print(f"Brand: {self.brand} Battery: {self.battery_capacity}mAh")
+
+# # Creating objects
+# l1 = Laptop("Dell", 8)
+# l1.specs()
+# l1.power_on() 
+
+# m1 = MobilePhone("Samsung", 4000)
+# m1.battery_status()
+# m1.power_on() 
+
+
+
+# class Shape:
+#     def __init__(self):
+#         pass
+
+#     def area(self):
+#         print("Area method is called")
+        
+
+# class Rectangle(Shape):
+#     def __init__(self, length, width):
+#         self.length = length
+#         self.width = width
+    
+#     def area(self, length, width):
+#         print("Area of the rectangle is", length * width) 
+         
+    
+# class Circle(Shape):
+#     def __init__(self, radius):
+#         self.radius = radius
+    
+#     def area(self, radius):
+#         print("Area of the circle is", 3.14 * radius * radius)
+
+# R1=Rectangle(10,20)
+# C1=Circle(5)
+# R1.area(10,20)
+# C1.area(5)  
+
+
+# class Animal:
+#     def make_sound(self):
+#         print("Some generic sound")
+
+# class Dog(Animal):
+
+#     def make_sound(self):
+#         print("Woof")
+
+# class Cat(Animal):
+#     def make_sound(self):
+#         print("Meow")
+
+
+# d1=Dog()
+# c1=Cat()
+# d1.make_sound()
+# c1.make_sound()  
+
+
+
+# class Parent:
+#     def __init__(self):
+#         self.__private_var=10
+
+#     def get_private_var(self):  # Getter method
+#         return self.__private_var 
+
+# class child(Parent):
+#     def show_private_var(self):
+#         print(self.get_private_var()) 
+
+# c = child()
+# c.show_private_var() 
+
+# class Point:
+#     def __init__(self,x,y):
+#         self.x=x
+#         self.y=y
+    
+#     def __add__(self,other):
+#         return Point(self.x+other.x,self.y+other.y)
+
+
+# p1=Point(1,2)
+# p2=Point(3,4)
+# result=p1+p2
+# print(result.x,result.y)
+
+# class Point:
+#     def __init__(self,x,y):
+#         self.x=x
+#         self.y=y
+    
+#     def __sub__(self,other):
+#         return Point(self.x-other.x,self.y-other.y)
+
+
+# p1=Point(1,2)
+# p2=Point(3,4)
+# Result=p1-p2
+# print(Result.x,Result.y)  # Output: -2 -2
+
+
+# class Point:
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y= y
+    
+#     def __mul__(self, other):
+#         return Point(self.x*other.x, self.y*other.y)
+
+# p1 = Point(1, 2)
+# p2 = Point(3, 4)
+# result = p1 * p2
+# print(result.x, result.y)  # Output: 3 8
+
+
+# class Student:
+#     def __init__(self,x,y):
+#         self.x=x
+#         self.y=y
+    
+#     def __eq__(self,other):
+#         return  self.y==other.y
+
+# s1 = Student("Alice", 90)
+# s2 = Student("Bob", 90)
+
+# print(s1 == s2)  # Output: True
+
+
+# class ComplexNumber:
+#     def __init__(self,x,y):
+#         self.x=x
+#         self.y=y
+    
+#     def __add__(self,other):
+#         return ComplexNumber(self.x+other.x,self.y+other.y)
+    
+
+# c1 = ComplexNumber(3, 5)
+# c2 = ComplexNumber(2, 4)
+# c3=c1+c2
+# # print(f"{c3.x} + {c3.y}i")  # Output: 5 9
+
+
+# class Time:
+#     def __init__(self, hours, minutes):
+#         self.hours = hours
+#         self.minutes = minutes
+    
+#     def convert_to_time(self):
+#         total_minutes = self.hours * 60 + self.minutes
+#         h = total_minutes // 60  # Get hours
+#         m = total_minutes % 60   # Get remaining minutes
+#         return Time(h, m)  # Return a new Time object
+
+# t1 = Time(0, 930)  # 930 minutes = 15 hours 30 minutes
+# t2 = t1.convert_to_time()  
+# print(f"{t2.hours} hours {t2.minutes} minutes")  
+ # Output:
+
+
+# class MyString:
+#     def __init__(self, s):
+#         self.s = s
+    
+
+#     def __eq__(self, value):
+#        return self.s.lower() == value.s.lower()
+
+
+# s1 = MyString("Hello")
+# s2 = MyString("helloo")
+# print(s1 == s2) 
+
+
+# class Power:
+#     def __init__(self, base):
+#         self.base = base
+    
+#     def __pow__(self, other):
+#         if isinstance(other,(int,float)):
+#             return self.base ** other
+#         else:
+#             raise TypeError("Power is not defined for non-numeric values")
+
+
+# p = Power(2)
+# print(p ** 3) 
+    
+# class Power:
+#     def __init__(self,base):
+#         self.base=base
+
+#     def __pow__(self,other):
+#         if isinstance(other,(int,float,object)):
+#             return self.base ** other.base
+#         else:
+#             raise TypeError("Power is not defined for non-numeric values")
+
+
+# p1 = Power(2)
+# p2 = Power(3)
+# print(p1 ** p2)
+
+
+
+
+# from abc import ABC,abstractmethod
+
+# class Animal(ABC):
+#     @abstractmethod
+#     def make_sound(self):
+#         pass
+
+# class Dog(Animal):
+#     def make_sound(self):
+#         print("Bark!")
+
+# class Cat(Animal):
+#     def make_sound(self):
+#         print("Meow!")
+    
+# d=Dog()
+# d.make_sound()
+# c=Cat()
+# c.make_sound()  # Output: Meow!
+
+# from abc import ABC,abstractmethod
+
+# class Vehicle(ABC):
+#     def __init__(self,brand):
+#         self.brand=brand
+        
+#     @abstractmethod
+#     def start_engine(self):
+#         pass
+    
+#     def show_brand(self):  # Normal method
+#         print(f"Brand: {self.brand}")
+
+# class Car(Vehicle):
+#     def start_engine(self):
+#         print(f"The {self.brand} car's engine has started!")
+
+# class Bike(Vehicle):
+#     def start_engine(self):
+#         print(f"The {self.brand} bike's engine has started!")
+#     def engine_start(self):
+#         print(f"The {self.brand} bike's engine has started!")
+    
+
+
+# c=Car("Audi")
+# c.show_brand()
+# c.start_engine()
+# b=Bike("Honda")
+# b.show_brand()
+# Output: AttributeError: 'Bike' object has no attribute '
+
+
+# from abc import ABC,abstractmethod
+
+# class A(ABC):
+#     def show(self):
+#         print("Normal method")
+
+# obj= A()
+
+# class B(ABC):
+#     @abstractmethod
+#     def show(self):
+#         pass
+
+
+# obj1=B()
+
+
+# from abc import ABC,abstractmethod
+
+# class Appliance(ABC):
+#     @abstractmethod
+#     def turn_on(self):
+#         pass
+
+# class Fan(Appliance):
+#     def turn_on(self):
+#         print("Fan is now running.")
+
+# class Light(Appliance):
+#     def turn_on(self):
+#         print("Light is now on.")
+
+# f=Fan()
+# f.turn_on()
+# l=Light()
+# l.turn_on()
+
+
+# from abc import ABC,abstractmethod
+
+# class BankAccount(ABC):
+#     @abstractmethod
+#     def get_balance(self):
+#         pass
+
+# class SavingsAccount(BankAccount):
+#     def __init__(self, balance):
+#         self.balance = balance
+
+#     def get_balance(self):
+#         print("You saving account balance is: ", self.balance)
+
+# class CurrentAccount(BankAccount):
+#     def __init__(self, balance):
+#         self.balance = balance
+    
+#     def get_balance(self):
+#         print("You current account balance is: ", self.balance)
+
+
+# s1=SavingsAccount(5000000)
+# s1.get_balance()
+# c1=CurrentAccount(6000000)
+# c1.get_balance()
+
+# from abc import ABC,abstractmethod
+
+# class Shape(ABC):
+#     @abstractmethod
+#     def calculate_area(self):
+#         pass
+
+# class Rectangle(Shape):
+#     def __init__(self, length, width):
+#         self.length = length
+#         self.width = width
+
+#     def calculate_area(self):
+#         print("Area of the rectangle is", self.length * self.width)
+
+# class Circle(Shape):
+#     def __init__(self, radius):
+#         self.radius = radius
+    
+#     def calculate_area(self):
+#         print("Area of the circle is", 3.14 * (self.radius ** 2))
+
+
+# r1=Rectangle(5,6)
+# r1.calculate_area()
+# c1=Circle(7)
+# c1.calculate_area()
+
+
+# from abc import ABC,abstractmethod
+
+# class Employee(ABC):
+#     @abstractmethod
+#     def calculate_salary(self):
+#         pass
+
+#     def employee_info(self):
+#         print("Employee is a class that has a method to calculate salary")
+
+# class FullTimeEmployee(Employee):
+#     def __init__(self, name, salary):
+#         self.name = name
+#         self.salary = salary
+    
+#     def calculate_salary(self):
+#         print(f"Salary of {self.name} is {self.salary}")
+
+# class PartTimeEmployee(Employee):
+#     def __init__(self, name, hourly_wage, hours_worked):
+#         self.name=name
+#         self.hourly_wage = hourly_wage
+#         self.hours_worked = hours_worked
+    
+#     def calculate_salary(self):
+#         print(f"Salary of {self.name} is {self.hourly_wage * self.hours_worked}")
+
+# f1=FullTimeEmployee("Rakshit",50000)
+# f1.calculate_salary()
+# p1=PartTimeEmployee("Rahul",100,40)
+# p1.calculate_salary()
+
+
+# from abc import ABC,abstractmethod
+
+# class Animal(ABC):
+#     @abstractmethod
+#     def make_sound(self):
+#         pass
+
+# class Dog(Animal):
+#     def make_sound(self):
+#         print("Barking")
+
+# class cat(Animal):
+#     def make_sound(self):
+#         print("Meowing")
+
+# class cow(Animal):
+#     def make_sound(self):
+#         print("Mooing")
+
+# d1=Dog()
+# d1.make_sound()
+# c1=cat()
+# c1.make_sound()
+# c2=cow()
+# c2.make_sound()  
+
+
+# class BankAccount:
+#     def __init__(self, account_holder, balance):
+#         self.account_holder = account_holder
+#         self.__balance = balance  # Private variable
+
+#     def get_balance(self):
+#         return f"Dear customer, your account balance is {self.__balance}"
+
+#     def set_deposit(self, amount):
+#         self.__balance += amount
+#         print(f"₹{amount} deposited. {self.get_balance()}")
+
+#     def set_withdraw(self, withD):
+#         if withD > self.__balance:
+#             print("Insufficient balance")
+#         elif withD == 0:
+#             print("Withdrawal amount cannot be zero")
+#         else:
+#             self.__balance -= withD
+#             print(f"₹{withD} withdrawn. {self.get_balance()}")
+
+# # Test the class
+# acc = BankAccount("Rakshit", 5000)
+# acc.set_deposit(2000)
+# acc.set_withdraw(1000)
+# print(acc.get_balance())  # Expected: "Dear customer, your account balance is 6000"
+# acc.set_withdraw(7000)  # Should print a warning message
+
+
+# class Student:
+#     def __init__(self, name, marks):
+#         self.name = name
+#         self.__marks = marks  # Private variable
+
+#     def get_marks(self):
+#         return self.__marks
+    
+#     def set_marks(self, marks):
+#         if 0 <= marks <= 100:
+#             self.__marks = marks
+#             print(f"Marks updated successfully. New Marks: {self.__marks}")
+#         else:
+#             print("Invalid marks! Marks should be between 0 and 100.")
+
+# # Test the class
+# s1 = Student("Rahul", 80)
+# print(s1.get_marks())  # Expected: 80
+# s1.set_marks(95)  # Updates marks to 95
+# print(s1.get_marks())  # Expected: 95
+# s1.set_marks(-10)  # Should print a warning message, but marks remain unchanged
+# print(s1.get_marks())  # Should still be 95
+
+# my_list=["True","True","True","False"]
+
+# result=any(my_list)
+# print(result)  # Expected: True
+
+# numbers=[0,0,0,0]
+# result=any(numbers)
+# print(result)  # Expected: False
+
+# str="rakshit1"
+# result= any(str)
+# print(result)
+
+
+# # str="rakshit1"
+# # result= any(char.isdigit() for char in str)
+
+# # print(result)
+# char="3"
+# result=char.isdigit()
+# print(result)  # Expected: False
+
+
+# str="rakshit@1"
+# special_char="!@#$%^&*()"
+# if any((char.isdigit() for char in str) and (char in special_char for char in str)):
+#     print("Okay correct pass")
+# else:
+#     print("Not correct")
+
+
+# class Email:
+#     def __init__(self, email, password):
+#         self.email = email
+#         self.__password = password
+
+#     def get_password(self):
+#         print("Access Denied")
+
+#     def set_password(self, new_pass):
+#         special_chars = "!@#$%^&*()"
+        
+#         if (
+#             any(char.isdigit() for char in new_pass) and
+#             any(char in special_chars for char in new_pass) and
+#             len(new_pass) >= 8
+#         ):
+#             self.__password = new_pass
+#             print("Password updated successfully")
+#         else:
+#             print("Weak password! Password not updated")
+
+
+# # Test cases
+# e1 = Email("myemail@example.com", "Strong@123")
+# e1.get_password()  # Expected: Access Denied
+
+# e1.set_password("weak")  # Expected: Weak password! Password not updated
+# e1.get_password()  # Expected: Access Denied
+
+# e1.set_password("New@Pass1")  # Expected: Password updated successfully
+# e1.get_password()  # Expected: Access Denied
+
+
+class User:
+    def __init__(self, username, password):
+        self.username = username
+        self.__password = password
+
+    def get_password(self):
+        return "Access Denied"
+
+    def set_password(self, new_pass):
+        special_chars = "!@#$%^&*()"
+        
+        if (
+            any(char.isdigit() for char in new_pass) and
+            any(char in special_chars for char in new_pass) and
+            len(new_pass) >= 8
+        ):
+            self.__password = new_pass
+            return "Password updated successfully"
+        else:
+            return "Weak password! Password not updated"
+        
+    def login(self, entered_username, entered_password):
+        if entered_username == self.username and entered_password == self.__password:
+            return "Login successful!"
+        else:
+            return "Invalid username or password"
+
+
+# Test cases
+user1 = User("Rakshit", "Pass@123")  # Initially set a password
+
+print(user1.set_password("Hello123"))  # Weak password (no special character)
+print(user1.set_password("Strong@123"))  # Password updated successfully
+
+print(user1.login("Rakshit", "Wrong@123"))  # Invalid credentials
+print(user1.login("Rakshit", "Strong@123"))  # Login successful!
+

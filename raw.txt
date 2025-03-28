@@ -1126,3 +1126,251 @@ print(user1.set_password("Strong@123"))  # Password updated successfully
 print(user1.login("Rakshit", "Wrong@123"))  # Invalid credentials
 print(user1.login("Rakshit", "Strong@123"))  # Login successful!
 
+
+
+
+
+
+# 28-03-2025 #
+
+
+# try: 
+#     x=5//5
+#     print(x)
+# except ZeroDivisionError:
+#     print("Error: Division by zero is not allowed")
+
+
+# try:
+#     num = int(input("Enter a number: "))
+#     result = 10 / num
+# except ZeroDivisionError:
+#     print("You cannot divide by zero!")
+# except ValueError:
+#     print("Invalid input! Please enter a number.")
+
+
+
+# try:
+#     num=int(input("Enter the number :"))
+#     result=10/num
+# except ZeroDivisionError:
+#     print("You cannot divide by zero!")
+# except ValueError:
+#     print("Invalid input! Please enter a number.")
+# else:
+#     print("The result is:",result)
+# finally:
+#       print("Execution complete.")
+
+# age = int(input("Enter your age: "))
+# if age < 18:
+#     raise ValueError("You must be at least 18 years old.")
+# else:
+#     print("Welcome!")
+
+
+# try:
+#     print("xyz"+4)
+# except TypeError:
+#    print("You cannot add a string and a number together.")
+
+# my_list = [1, 2, 3]
+# try: 
+#     print(my_list[10])
+# except IndexError:
+#     print("Error: Index out of range")
+
+
+# my_dict = {"name": "Rakshit"}
+# try:
+#     print(my_dict["age"])  # 'age' key does not exist in the dictionary
+# except KeyError:
+#     print("Key not found in dictionary!")
+
+
+# try:
+#     file = open("non_existing_file.txt")
+# except FileNotFoundError:
+#     print("File not found!")
+
+
+
+
+
+
+
+
+
+
+
+
+# try:
+#     num1 = float(input("Enter first number: "))  # Convert to float
+#     num2 = float(input("Enter second number: "))  # Convert to float
+#     result = num1 / num2  
+# except ZeroDivisionError:
+#     print("Error: Division by zero is not allowed!")
+# except ValueError:
+#     print("Error: Invalid input. Please enter numbers only.")  # Handles non-numeric input
+# else:
+#     print("Result:", result)
+
+
+
+# try:
+#     numbers = [10, 20, 30]
+#     index=int(input("Enter an index (0-2): "))
+#     print("Value at index:", numbers[index])
+# except Exception as e:
+#     print("An error occurred:", e)
+
+# class InvalidAgeError(Exception):
+#     pass
+
+# try:
+#     age = int(input("Enter your age: "))
+#     if age < 0:
+#         raise InvalidAgeError("Age cannot be negative!")
+#     print("Your age is:", age)
+# except InvalidAgeError as e:
+#     print("Error:", e)
+# except ValueError:
+#     print("Invalid input! Please enter a number.")
+
+
+# try:
+#     num1 = int(input("Enter first number: "))
+#     num2 = int(input("Enter second number: "))
+#     result = num1 / num2
+#     print("Result:", result)
+
+# except ZeroDivisionError:
+#     print("Error: Cannot divide by zero!")
+# except ValueError:
+#     print("Error: Please enter numbers only!")
+# except Exception as e:
+#     print("Unexpected Error:", e)
+
+
+# class NegativeNumberError(Exception):
+#     pass
+
+
+# try:
+#     num=int(input("Enter a number which not  -ve : "))
+#     if num < 0:
+#         raise NegativeNumberError("Number cannot be negative!")
+#     print(f"Square of you give number {num} is {num**2}")
+# except ValueError:
+#     print("Error: Please enter a number!")
+# except Exception as e:
+#     print("Unexpected Error:", e)
+
+
+# try:
+#     file = open("test.txt", "r")
+#     content = file.read()
+#     print(content)
+
+# except FileNotFoundError:
+#     print("Error: File not found!")
+
+# finally:
+#     print("Closing file (if opened)...")
+#     try:
+#         file.close()  # Attempt to close the file safely
+#     except NameError:
+#         print("File was never opened.")
+
+# Try the second practice question: File Handling with Exceptions
+
+# Open a file named "data.txt".
+
+# If the file is missing, catch FileNotFoundError.
+
+# If the file exists, read and print its content.
+
+# Use finally to close the file properly.
+
+# try:
+#     file = open("data.txt", "r")
+#     content=file.read()
+#     print(content)
+
+# except FileNotFoundError:
+#     print("Error: File not found!")
+
+# finally:
+#     print("Closing file (if opened)...")
+#     try:
+#         file.close()  # Attempt to close the file safely
+#     except NameError:
+#         print("File was never opened.")
+
+
+# Bank Withdrawal System
+
+# Ask the user for a withdrawal amount.
+
+# If amount is more than balance, raise InsufficientBalanceError.
+
+# If amount is negative or zero, raise InvalidTransactionError.
+
+# Otherwise, deduct the amount and show remaining balance.
+
+
+# class InvalidTransactionError(Exception):
+#     pass
+
+# class InsufficientBalanceError(Exception):
+#     pass
+
+# balance=50000
+# try:
+#     withdraw=int(input("Enter the withdraw amount please: "))
+#     if withdraw<=0:
+#         raise InvalidTransactionError("Invalid transaction")
+#     elif withdraw>balance:
+#         raise InsufficientBalanceError("Insufficient balance")
+#     else:
+#         balance-=withdraw
+#         print("Remaining balance is",balance)
+
+# except Exception as e:
+#     print("Error:",e)
+
+
+
+# class InvalidTransactionError(Exception):
+#     pass
+
+# class InsufficientBalanceError(Exception):
+#     pass
+
+# class BankAccount:
+#     def __init__(self,balance):
+#         self.balance = balance
+    
+#     def withdraw(self,amount):
+#         if amount <= 0:
+#             raise InvalidTransactionError("Invalid transaction")
+#         elif amount > self.balance:
+#             raise InsufficientBalanceError("Insufficient balance")
+#         else:
+#             self.balance -= amount
+#             print(f"Withdrawal successful! Remaining balance: {self.balance}")
+
+
+# try:
+#     account = BankAccount(50000)
+#     withdraw_amount = int(input("Enter the withdrawal amount: "))
+#     account.withdraw(withdraw_amount)
+# except InvalidTransactionError as e:
+#     print("Transaction Error:", e)
+# except InsufficientBalanceError as e:
+#     print("Balance Error:", e)
+# except ValueError:
+#     print("Error: Please enter a valid number.")
+# except Exception as e:
+#     print("Unexpected Error:", e)

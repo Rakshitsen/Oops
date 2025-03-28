@@ -1,0 +1,126 @@
+1. What are Built-in Exceptions?
+Python automatically raises errors when something goes wrong in your code. These errors have specific names and meaning.
+
+
+
+
+
+Exception Name	        When It Occurs
+ZeroDivisionError	When dividing by zero (5 / 0)
+ValueError	        When passing the wrong type of value (int("abc"))
+TypeError	        When operations are done on the wrong data type ("5" + 5)
+IndexError	        When accessing an invalid index in a list (my_list[10])
+KeyError        	When accessing a non-existing key in a dictionary (my_dict["xyz"])
+FileNotFoundError	When trying to open a file that does not exist (open("xyz.txt"))
+AttributeError	        When accessing a non-existing attribute (5.append(3))
+ImportError	        When a module cannot be found (import xyz_module)
+NameError	        When a variable is not defined (print(xyz))
+IndentationError 	When indentation is incorrect in the code
+SyntaxError     	When there is an invalid Python syntax (print "hello")
+
+
+
+
+else Block → Runs if no exception occurs.
+
+finally Block → Always executes, whether an exception occurs or not.
+
+
+
+Some Common Exceptions:
+
+try:
+    print(10 / 0)
+except ZeroDivisionError:
+    print("You cannot divide by zero!")
+
+
+
+
+
+try:
+    num = int("xyz")  # Trying to convert a string into an integer
+except ValueError:
+    print("Invalid input! Please enter a valid number.")
+
+
+
+
+
+try:
+    print("Hello" + 5)  # Adding a string and an integer
+except TypeError:
+    print("You cannot add a string and a number together.")
+
+
+
+
+
+my_list = [1, 2, 3]
+try:
+    print(my_list[10])  # Trying to access an index that doesn’t exist
+except IndexError:
+    print("Index out of range!")
+
+
+
+
+
+my_dict = {"name": "Rakshit"}
+try:
+    print(my_dict["age"])  # 'age' key does not exist in the dictionary
+except KeyError:
+    print("Key not found in dictionary!")
+
+
+
+
+
+
+
+try:
+    file = open("non_existing_file.txt")
+except FileNotFoundError:
+    print("File not found!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exception as e
+When we write except Exception as e:, we are:
+
+Catching any type of exception that occurs in the try block.
+
+Storing the error message in the variable e, which we can print or log for debugging.
+
+
+try:
+    x = int(input("Enter a number: "))
+    y = 10 / x  # May cause ZeroDivisionError
+except Exception as e:
+    print("An error occurred:", e)  # Prints the exact error message
+
+
+Key Benefits:
+
+Helps in debugging by displaying exact error messages.
+
+Instead of writing multiple except blocks, you can catch all errors in one place (not recommended for all cases).
+
+Prints the error message dynamically.
+
+Good for debugging but not recommended for production (specific exceptions are better).
+
+
+
+
+

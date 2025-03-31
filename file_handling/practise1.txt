@@ -1,0 +1,6 @@
+try :
+    with open("output.txt", "r") as file:
+        content=file.read()
+        print("Content of file \n",content)
+except FileNotFoundError:
+    print("Error file not found error")

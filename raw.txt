@@ -1374,3 +1374,232 @@ print(user1.login("Rakshit", "Strong@123"))  # Login successful!
 #     print("Error: Please enter a valid number.")
 # except Exception as e:
 #     print("Unexpected Error:", e)
+
+
+
+# import logging
+# # logging.basicConfig(level=logging.DEBUG)
+# logging.basicConfig()
+# logging.debug("This is a debug message")
+# logging.info("This is an info message")
+# logging.warning("This is a warning message")
+# logging.error("This is an error message")
+# logging.critical("This is a critical message")
+
+
+
+
+# import logging
+
+# # Configure logging to write to a file
+# logging.basicConfig(filename="app.log", level=logging.ERROR, 
+#                     format="%(asctime)s - %(levelname)s - %(message)s")
+
+# logging.debug("This will not be logged because level is set to ERROR")
+# logging.info("This will also not be logged")
+# logging.warning("Warnings are ignored too")
+# logging.error("This is an error message")
+# logging.critical("This is a critical error")
+
+
+# import logging
+# logging.basicConfig(filename="app1.log",level=logging.ERROR,
+#                     format="%(asctime)s -- %(levelname)s -- %(message)s")
+
+# try:
+#     num1 = int(input("Enter first number: "))
+#     num2 = int(input("Enter second number: "))
+#     result = num1 / num2
+#     print("Result:", result)
+# except ZeroDivisionError:
+#     logging.error("Attempted division by zero")
+#     print("Error: Cannot divide by zero!")
+# except ValueError:
+#     logging.error("Invalid input provided, expected a number")
+#     print("Error: Please enter valid numbers!")
+# except Exception as e:
+#     logging.error(f"Unexpected error: {e}")
+#     print("Something went wrong!")
+
+
+# import logging
+
+# logging.basicConfig(level=logging.DEBUG)
+
+
+# logging.warning("This is a warning message")
+# logging.error("This is an error message")
+# logging.critical("This is a critical message")
+# logging.debug("This is a debug message")
+# logging.info("This is an info message")
+
+
+# import logging
+
+
+# logging.basicConfig(filename="app.log",level=logging.DEBUG,
+#                     format="%(asctime)s -- %(levelname)s -- %(message)s")
+
+# logging.warning("This is a warning message")
+# logging.error("This is an error message")
+# logging.critical("This is a critical message")
+# logging.debug("This is a debug message")
+# logging.info("This is an info message")
+# import logging
+
+# # Configure logging to save logs to a file
+# logging.basicConfig(filename="file_errors.log", level=logging.ERROR, 
+#                     format="%(asctime)s -- %(levelname)s -- %(message)s")
+
+# try:
+#     file = open("data.log", "r")  # Try opening the file
+#     content = file.read()
+#     print(content)
+#     file.close()
+# except FileNotFoundError:
+#     logging.error("File 'data.txt' not found!")  # Log an error if file is missing
+
+
+# import logging
+
+# # Configure logging
+# logging.basicConfig(filename="file_errors.log", level=logging.INFO, 
+#                     format="%(asctime)s -- %(levelname)s -- %(message)s")
+
+# try:
+#     a = int(input("Enter the first number: "))
+#     b = int(input("Enter the second number: "))
+    
+#     c = a / b  # Perform division
+    
+#     logging.info(f"Division successful: {a} / {b} = {c}")  # Correct logging
+#     print("Result:", c)  # Print result for user
+
+# except ZeroDivisionError:
+#     logging.error("Error: Division by zero is not allowed!")
+#     print("Error: Division by zero is not allowed!")
+
+# except ValueError:
+#     logging.error("Error: Invalid input! Please enter numeric values only.")
+#     print("Error: Invalid input! Please enter numeric values only.")
+
+
+
+
+
+
+# try:
+#     file = open("app.log","r")
+#     content = file.read()
+#     print(content)
+#     file.close()
+# except FileNotFoundError:
+#     print("Error: file not found")
+
+
+# try:
+#     data=input("enter your desire data")
+#     file = open("output.txt","w")
+#     file.write(data)
+#     # file.write("nikki pagal h")
+#     # file.write("i am studying file handling topic for now")
+#     file.close()
+#     print("data written successfully")
+# except Exception as e:
+#     print("Error:",e)
+
+# try:
+#     data=input("enter your desire data")
+#     file=open("output.txt","a")
+#     file.write(data)
+#     file.close()
+#     print("Data append successfully")
+# except Exception as e:
+#     print("Error:",e)
+
+
+
+# try:
+#     with open("output1.txt","r") as file:
+#         content = file.read()
+#         print("Content of file \n",content)
+# except FileNotFoundError:
+#     print("Error file not found error")
+# except Exception as e:
+#     print("Unexpected error:", e)
+
+
+
+# with open("output.txt", "r+") as file:
+#     content = file.read()  # Read existing content
+#     print("Before Writing:", content)
+
+#     file.write("\nNew Line Added!")  # Append new content
+
+#     file.seek(0)  # Move cursor to the beginning
+#     updated_content = file.read()  # Read updated content
+#     print("After Writing:", updated_content)
+
+# try:
+#     with open("my_notes.txt", "w+") as file:
+#         file.write("Python file handling is important!")
+# except FileNotFoundError:
+#     print("Error file not found error")
+
+# name=input("Enter your name: ")
+# fav_lang = input("Enter your programming language")
+# with open ("output.txt", "a+") as file:
+#     file.write(f"Name: {name}\nFavorite Language: {fav_lang}") 
+#     content = file.read()
+#     print("\nSaved File Content:\n", content) 
+
+# try :
+#     with open("output.txt", "r") as file:
+#         content=file.read()
+#         print("Content of file \n",content)
+# except FileNotFoundError:
+#     print("Error file not found error")
+
+
+# try:
+#     with open("user_data.txt", "w+") as file:
+#         for i in range(3):
+#             data = input(f"Enter line {i+1}: ")  # Take 3 lines of input
+#             file.write(data + "\n")  # Write input to file with a newline
+        
+#         file.seek(0)  # Move cursor to the beginning before reading
+#         content = file.read()
+#         print("\nFile Content:\n", content)
+        
+# except Exception as e:
+#     print("Unexpected error:", e)
+
+    
+# try:
+#     with open("number.txt", "r") as file:
+#         total = 0
+#         for line in file:
+#             total += int(line.strip())  # Convert each line to an integer and add to total
+
+#     print("Sum of numbers:", total)
+
+# except FileNotFoundError:
+#     print("Error: The file 'numbers.txt' was not found.")
+
+# except ValueError:
+#     print("Error: The file contains invalid data (not numbers).")
+
+
+try:
+    with open("app.log","r") as file:
+        count = 0
+        for line in file:
+            if "ERROR" in line.strip():
+                count+=1
+        print(f"The word 'ERROR' appears {count} times in logs.txt.")
+
+except FileNotFoundError:
+    print("Error: The file 'logs.txt' was not found.")
+
+except Exception as e:
+    print("Unexpected error:", e)

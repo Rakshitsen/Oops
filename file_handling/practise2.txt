@@ -1,0 +1,13 @@
+try:
+    with open("user_data.txt", "w+") as file:
+        for i in range(3):
+            data = input(f"Enter line {i+1}: ")  # Take 3 lines of input
+            file.write(data + "\n")  # Write input to file with a newline
+        
+        file.seek(0)  # Move cursor to the beginning before reading
+        content = file.read()
+        print("\nFile Content:\n", content)
+        
+except Exception as e:
+    print("Unexpected error:", e)
+

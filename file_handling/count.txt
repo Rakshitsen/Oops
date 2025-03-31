@@ -1,0 +1,13 @@
+try:
+    with open("app.log","r") as file:
+        count = 0
+        for line in file:
+            if "ERROR" in line.strip():
+                count+=1
+        print(f"The word 'ERROR' appears {count} times in logs.txt.")
+
+except FileNotFoundError:
+    print("Error: The file 'logs.txt' was not found.")
+
+except Exception as e:
+    print("Unexpected error:", e)

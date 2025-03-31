@@ -1,0 +1,14 @@
+try:
+    with open("number.txt", "r") as file:
+        total = 0
+        for line in file:
+            total += int(line.strip())  # Convert each line to an integer and add to total
+
+    print("Sum of numbers:", total)
+
+except FileNotFoundError:
+    print("Error: The file 'numbers.txt' was not found.")
+
+except ValueError:
+    print("Error: The file contains invalid data (not numbers).")
+
